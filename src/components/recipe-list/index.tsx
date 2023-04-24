@@ -50,7 +50,7 @@ export const RecipeList = ({ searchValue }: { searchValue: string }) => {
 
   return (
     <Container>
-      <Grid container spacing={{ xs: 2, md: 4 }}>
+      <Grid container spacing={{ xs: 2, md: 3 }}>
         {visibleRecipes.length === 0 ? (
           <EmptyResult />
         ) : (
