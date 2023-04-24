@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
-import { ProductCardProps } from "./types";
+import { RecipeCardProps } from "./types";
 
-export const ProductCard = (props: ProductCardProps) => {
+export const RecipeCard = (props: RecipeCardProps) => {
   const { title, author } = props;
   return (
     <Paper elevation={0}>

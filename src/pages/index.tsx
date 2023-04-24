@@ -1,11 +1,8 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
-import { ProductList, SearchBar, Footer } from "components";
+import { RecipeList, SearchBar, Footer } from "components";
 import Container from "@mui/material/Container";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -44,7 +41,7 @@ export default function Home() {
           </div>
           <Stack spacing={10} style={{ alignItems: "center" }}>
             <SearchBar />
-            <ProductList />
+            <RecipeList />
           </Stack>
         </Stack>
       </Container>

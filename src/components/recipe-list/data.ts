@@ -1,4 +1,4 @@
-import { ProductCardProps } from "components/product-card/types";
+import { ProductCardProps } from "components/recipe-card/types";
 
 export const data: ProductCardProps[] = [
   {
