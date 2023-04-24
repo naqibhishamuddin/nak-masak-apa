@@ -2,8 +2,9 @@ import { useState } from "react";
 import Head from "next/head";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
-import { RecipeList, SearchBar, Footer } from "components";
 import Container from "@mui/material/Container";
+import Chip from "@mui/material/Chip";
+import { RecipeList, SearchBar, Footer } from "components";
 
 const Home = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -29,7 +30,14 @@ const Home = () => {
         }}
       >
         <Stack spacing={10}>
-          <div>
+          <Container
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
             <Typography
               sx={{ color: "#333333", textAlign: "center" }}
               fontWeight={700}
@@ -42,11 +50,20 @@ const Home = () => {
               sx={{ color: "#333333", textAlign: "center" }}
               fontWeight={700}
               variant="h3"
+              mb={2.5}
             >
               <span style={{ color: "#F4A261" }}>Khairul Aming </span>
               <span>Di Sini</span>
             </Typography>
-          </div>
+            <Chip
+              sx={{
+                backgroundColor: "#333333",
+                color: "whiteSmoke",
+                paddingInline: 1,
+              }}
+              label="2023 Edition"
+            />
+          </Container>
           <Stack spacing={10} style={{ alignItems: "center" }}>
             <SearchBar onChange={onChangeSearchValue} />
             <RecipeList searchValue={searchValue} />
