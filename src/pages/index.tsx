@@ -24,19 +24,20 @@ export default function Home() {
         <Stack spacing={10}>
           <div>
             <Typography
-              sx={{ color: "#27272A", textAlign: "center" }}
+              sx={{ color: "#333333", textAlign: "center" }}
               fontWeight={700}
               variant="h3"
               mt={10}
             >
-              Cari Pelbagai Resepi Masakan
+              Wasssup guys, Cari Resepi
             </Typography>
             <Typography
-              sx={{ color: "#F4A261", textAlign: "center" }}
+              sx={{ color: "#333333", textAlign: "center" }}
               fontWeight={700}
               variant="h3"
             >
-              Khairul Aming
+              <span style={{ color: "#F4A261" }}>Khairul Aming </span>
+              <span>Di Sini</span>
             </Typography>
           </div>
           <Stack spacing={10} style={{ alignItems: "center" }}>
