@@ -2,10 +2,10 @@ import { useCallback, useMemo } from "react";
 import Image from "next/image";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
 import { RecipeCard } from "components";
 import { useInfiniteScrolling } from "hooks";
 import { recipes } from "./recipes";
-import Typography from "@mui/material/Typography";
 
 const EmptyResult = () => {
   return (
@@ -28,7 +28,6 @@ const EmptyResult = () => {
 
 export const RecipeList = ({ searchValue }: { searchValue: string }) => {
   const { visibleItemCount } = useInfiniteScrolling();
-
   const getRecipes = useCallback(
     (list: typeof recipes) => {
       if (searchValue) {
@@ -51,7 +50,7 @@ export const RecipeList = ({ searchValue }: { searchValue: string }) => {
 
   return (
     <Container>
-      <Grid container spacing={{ xs: 2, md: 6 }}>
+      <Grid container spacing={{ xs: 2, md: 4 }}>
         {visibleRecipes.length === 0 ? (
           <EmptyResult />
         ) : (
