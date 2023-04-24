@@ -11,7 +11,14 @@ export const SearchBar = ({ onChange }: { onChange?(value: string): void }) => {
     useSearchBar(onChange);
 
   return (
-    <Paper component="form" className={styles.container}>
+    <Paper
+      component="form"
+      className={styles.container}
+      sx={{
+        borderRadius: "2rem",
+        boxShadow: "rgba(244, 162, 97, 0.2) 0px 8px 24px",
+      }}
+    >
       {/** Animated text */}
       <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
         <SearchIcon />
