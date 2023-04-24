@@ -28,9 +28,9 @@ export const SearchBar = ({ onChange }: { onChange?(value: string): void }) => {
           sequence={[
             "Nasi Goreng Pattaya",
             1000,
-            "Nasi Goreng Butter Chicken",
+            "Nasi Goreng Belacan Ala Thai",
             1000,
-            "Ketam Masak Lemak Cili Api",
+            "Salted Egg Chicken",
             1000,
             "Ayam Gepuk",
             1000,
@@ -42,7 +42,6 @@ export const SearchBar = ({ onChange }: { onChange?(value: string): void }) => {
       )}
 
       <InputBase
-        aria-labelledby="search"
         onChange={onChangeText}
         onFocus={onFocus}
         onBlur={onBlur}
