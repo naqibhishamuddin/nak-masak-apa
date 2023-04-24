@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import { ProductList, SearchBar, Footer } from "components";
-import styles from "styles/Home.module.css";
 import Container from "@mui/material/Container";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -25,28 +24,28 @@ export default function Home() {
           paddingBlock: 5,
         }}
       >
-        <Typography
-          sx={{ color: "#27272A", textAlign: "center" }}
-          fontWeight={700}
-          variant="h2"
-          mt={10}
-        >
-          Cari Pelbagai Resepi Masakan
-        </Typography>
-        <Typography
-          sx={{ color: "#27272A", textAlign: "center" }}
-          fontWeight={700}
-          variant="h2"
-        >
-          Khairul Aming
-        </Typography>
-
-        <Typography sx={{ mt: "40px" }} mb={5} variant="subtitle1">
-          Nak masak apa hari ni?
-        </Typography>
-        <Stack spacing={5} style={{ alignItems: "center" }}>
-          <SearchBar />
-          <ProductList />
+        <Stack spacing={10}>
+          <div>
+            <Typography
+              sx={{ color: "#27272A", textAlign: "center" }}
+              fontWeight={700}
+              variant="h3"
+              mt={10}
+            >
+              Cari Pelbagai Resepi Masakan
+            </Typography>
+            <Typography
+              sx={{ color: "#F4A261", textAlign: "center" }}
+              fontWeight={700}
+              variant="h3"
+            >
+              Khairul Aming
+            </Typography>
+          </div>
+          <Stack spacing={10} style={{ alignItems: "center" }}>
+            <SearchBar />
+            <ProductList />
+          </Stack>
         </Stack>
       </Container>
       <Footer />
