@@ -4,7 +4,8 @@ import Paper from "@mui/material/Paper";
 import { RecipeCardProps } from "./types";
 import { useRecipeCard } from "./useRecipeCard";
 import dayjs from "dayjs";
-var relativeTime = require("dayjs/plugin/relativeTime");
+import relativeTime from "dayjs/plugin/relativeTime";
+
 dayjs.extend(relativeTime);
 
 export const RecipeCard = (props: RecipeCardProps) => {
