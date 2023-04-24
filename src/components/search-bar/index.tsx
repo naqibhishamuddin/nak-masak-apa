@@ -4,7 +4,7 @@ import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import { useSearchBar } from "./useSearchBar";
-import styles from "./styles.module.css";
+import styles from "./SearchBar.module.css";
 
 export const SearchBar = ({ onChange }: { onChange?(value: string): void }) => {
   const { isPlaceholderVisible, onBlur, onChangeText, onFocus } =
