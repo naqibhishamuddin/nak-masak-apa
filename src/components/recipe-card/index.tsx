@@ -4,20 +4,28 @@ import Paper from "@mui/material/Paper";
 import { RecipeCardProps } from "./types";
 
 export const RecipeCard = (props: RecipeCardProps) => {
-  const { title, author } = props;
+  const { title } = props;
   return (
     <Paper elevation={0}>
-      <Image
-        style={{ width: "100%", borderRadius: "0.5rem" }}
-        width={200}
-        height={200}
-        src="https://images.immediate.co.uk/production/volatile/sites/30/2021/02/butter-chicken-ac2ff98.jpg"
-        alt={title}
-      />
-      <div style={{ padding: "0.5rem" }}>
-        <Typography variant="body1">{title}</Typography>
-        <Typography variant="body2" color="GrayText">
-          {author}
+      <div
+        style={{
+          width: "100%",
+          height: 200,
+          position: "relative",
+        }}
+      >
+        <Image
+          style={{ borderRadius: "0.5rem" }}
+          fill
+          src="/food.jpeg"
+          alt={title}
+          sizes="100%"
+          priority
+        />
+      </div>
+      <div style={{ paddingBlock: "0.5rem", paddingInline: "0.2rem" }}>
+        <Typography sx-={{ color: "#333333" }} variant="body1">
+          {title}
         </Typography>
       </div>
     </Paper>
