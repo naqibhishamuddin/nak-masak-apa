@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier . --write",
+    "format": "prettier ./src --write",
     "commit": "cz",
     "prepare": "husky install && chmod ug+x .husky/*"
   },
