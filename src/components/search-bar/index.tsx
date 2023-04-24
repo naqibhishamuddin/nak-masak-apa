@@ -42,6 +42,7 @@ export const SearchBar = ({ onChange }: { onChange?(value: string): void }) => {
       )}
 
       <InputBase
+        aria-labelledby="search"
         onChange={onChangeText}
         onFocus={onFocus}
         onBlur={onBlur}
