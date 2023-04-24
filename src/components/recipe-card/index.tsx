@@ -2,11 +2,19 @@ import Image from "next/image";
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 import { RecipeCardProps } from "./types";
+import { useRecipeCard } from "./useRecipeCard";
+import styles from "./styles.module.css";
 
 export const RecipeCard = (props: RecipeCardProps) => {
-  const { title } = props;
+  const { onClickRecipe } = useRecipeCard();
+  const { title, url } = props;
+
   return (
-    <Paper elevation={0}>
+    <Paper
+      className={styles.paper}
+      onClick={() => onClickRecipe(url)}
+      elevation={0}
+    >
       <div
         style={{
           width: "100%",

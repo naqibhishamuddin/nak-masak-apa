@@ -1,10 +1,17 @@
+import { useState } from "react";
 import Head from "next/head";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import { RecipeList, SearchBar, Footer } from "components";
 import Container from "@mui/material/Container";
 
-export default function Home() {
+const Home = () => {
+  const [searchValue, setSearchValue] = useState("");
+
+  const onChangeSearchValue = (value: string) => {
+    setSearchValue(value);
+  };
+
   return (
     <>
       <Head>
@@ -41,12 +48,14 @@ export default function Home() {
             </Typography>
           </div>
           <Stack spacing={10} style={{ alignItems: "center" }}>
-            <SearchBar />
-            <RecipeList />
+            <SearchBar onChange={onChangeSearchValue} />
+            <RecipeList searchValue={searchValue} />
           </Stack>
         </Stack>
       </Container>
       <Footer />
     </>
   );
-}
+};
+
+export default Home;
