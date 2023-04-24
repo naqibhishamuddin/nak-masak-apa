@@ -34,6 +34,9 @@ dependencies:
   cz-conventional-changelog:
     specifier: ^3.3.0
     version: 3.3.0
+  dayjs:
+    specifier: ^1.11.7
+    version: 1.11.7
   eslint:
     specifier: 8.38.0
     version: 8.38.0
@@ -1472,6 +1475,10 @@ packages:
   /dargs@7.0.0:
     resolution: {integrity: sha512-2iy1EkLdlBzQGvbweYRFxmFath8+K7+AKB0TlhHWkNuH+TmovaMH/Wp7V7R4u7f4SnX3OgLsU9t1NI9ioDnUpg==}
     engines: {node: '>=8'}
+    dev: false
+
+  /dayjs@1.11.7:
+    resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==}
     dev: false
 
   /debug@3.2.7:
