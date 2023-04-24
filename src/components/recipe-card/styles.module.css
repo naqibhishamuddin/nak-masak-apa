@@ -1,9 +1,0 @@
-.paper {
-  transition: transform 0.3s;
-  width: 100%;
-  height: 100%;
-}
-
-.paper:hover {
-  transform: scale(1.05);
-}

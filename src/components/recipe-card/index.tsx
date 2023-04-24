@@ -3,18 +3,13 @@ import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 import { RecipeCardProps } from "./types";
 import { useRecipeCard } from "./useRecipeCard";
-import styles from "./styles.module.css";
 
 export const RecipeCard = (props: RecipeCardProps) => {
   const { onClickRecipe } = useRecipeCard();
   const { title, url } = props;
 
   return (
-    <Paper
-      className={styles.paper}
-      onClick={() => onClickRecipe(url)}
-      elevation={0}
-    >
+    <Paper onClick={() => onClickRecipe(url)} elevation={0}>
       <div
         style={{
           width: "100%",
