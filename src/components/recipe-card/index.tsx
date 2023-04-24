@@ -29,6 +29,7 @@ export const RecipeCard = (props: RecipeCardProps) => {
           alt={title}
           sizes="100%"
           priority
+          placeholder="blur"
         />
       </div>
       <div style={{ paddingBlock: "0.5rem", paddingInline: "0.2rem" }}>
