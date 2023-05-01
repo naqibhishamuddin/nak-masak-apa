@@ -13,7 +13,11 @@ export const RecipeCard = (props: RecipeCardProps) => {
   const { title, url, thumbnail, createdAt } = props;
 
   return (
-    <Paper onClick={() => onClickRecipe(url)} elevation={0}>
+    <Paper
+      onClick={() => onClickRecipe(url)}
+      elevation={0}
+      sx={{ cursor: "pointer" }}
+    >
       <div
         style={{
           width: "100%",
