@@ -42,7 +42,7 @@ export const SearchBar = ({ onChange }: { onChange?(value: string): void }) => {
       )}
 
       <InputBase
-        onChange={onChangeText}
+        onChange={(event) => onChangeText(event.target.value)}
         onFocus={onFocus}
         onBlur={onBlur}
         sx={{ ml: 1, flex: 1 }}
