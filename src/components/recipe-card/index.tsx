@@ -30,6 +30,7 @@ export const RecipeCard = (props: RecipeCardProps) => {
           sizes="100%"
           priority
           placeholder="blur"
+          blurDataURL="data:image/png;base64,imagedata"
         />
       </div>
       <div style={{ paddingBlock: "0.5rem", paddingInline: "0.2rem" }}>
