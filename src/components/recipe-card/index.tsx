@@ -21,7 +21,7 @@ export const RecipeCard = (props: RecipeCardProps) => {
         transition: "transform 0.2s ease-out",
         cursor: "pointer",
         ":hover": {
-          transform: "scale(1.1)",
+          transform: "scale(1.01)",
           boxShadow: "10px 10px 20px rgba(0, 0, 0, 0.2)",
           transition: "transform 0.2s ease-in",
         },
