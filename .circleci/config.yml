@@ -27,8 +27,37 @@ jobs:
       - run:
           name: Build web
           command: pnpm run build
+  tests:
+    docker:
+      - image: node:alpine
+    resource_class: small
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+      - run:
+          name: Install Curl
+          command: apk add --no-cache curl
+      - run:
+          name: Install pnpm package manager
+          command: |
+            curl -L https://pnpm.js.org/pnpm.js | node - add --global pnpm@7
+      - run:
+          name: Install  project dependencies
+          command: pnpm install
+      - save_cache:
+          key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+          paths:
+            - node_modules
+      - run:
+          name: Build web
+          command: pnpm run coverage
+      - store_test_results:
+          path: test-results
 
 workflows:
   build-project:
     jobs:
       - build
+      - tests
