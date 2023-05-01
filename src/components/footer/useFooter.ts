@@ -1,5 +1,5 @@
 export const useFooter = () => {
-  const onClickContact = (type: "Email" | "Github" | "Website") => {
+  const onClickContact = (type: "Email" | "Github" | "Website" | string) => {
     switch (type) {
       case "Email":
         window.open("mailto:hello@naqibhishamuddin.com");
