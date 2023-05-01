@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Head from "next/head";
-import Typography from "@mui/material/Typography";
-import Stack from "@mui/material/Stack";
-import Container from "@mui/material/Container";
 import Chip from "@mui/material/Chip";
-import { RecipeList, SearchBar, Footer } from "components";
+import Container from "@mui/material/Container";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import { Footer, RecipeList, SearchBar } from "components";
 
 const Home = () => {
   const [searchValue, setSearchValue] = useState("");

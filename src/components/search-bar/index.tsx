@@ -1,10 +1,10 @@
-import { TypeAnimation } from "react-type-animation";
 import SearchIcon from "@mui/icons-material/Search";
-import Paper from "@mui/material/Paper";
-import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
+import InputBase from "@mui/material/InputBase";
+import Paper from "@mui/material/Paper";
+import { TypeAnimation } from "react-type-animation";
 import { useSearchBar } from "./useSearchBar";
-import styles from "./SearchBar.module.css";
+import styles from "./styles.module.css";
 
 export const SearchBar = ({ onChange }: { onChange?(value: string): void }) => {
   const { isPlaceholderVisible, onBlur, onChangeText, onFocus } =

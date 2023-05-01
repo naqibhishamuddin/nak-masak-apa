@@ -1,7 +1,7 @@
 import { useCallback, useMemo } from "react";
 import Image from "next/image";
-import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { RecipeCard } from "components";
 import { useInfiniteScrolling } from "hooks";

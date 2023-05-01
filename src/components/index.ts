@@ -1,4 +1,4 @@
-export * from "./search-bar";
+export * from "./footer";
 export * from "./recipe-card";
 export * from "./recipe-list";
-export * from "./footer";
+export * from "./search-bar";

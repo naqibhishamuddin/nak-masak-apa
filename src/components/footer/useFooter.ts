@@ -10,6 +10,8 @@ export const useFooter = () => {
       case "Website":
         window.open("https://naqibhishamuddin.com");
         break;
+      default:
+        break;
     }
   };
 

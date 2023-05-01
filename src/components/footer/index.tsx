@@ -1,12 +1,12 @@
+import EmailIcon from "@mui/icons-material/Email";
+import GithubIcon from "@mui/icons-material/GitHub";
+import WebsiteIcon from "@mui/icons-material/Language";
 import Container from "@mui/material/Container";
+import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import GithubIcon from "@mui/icons-material/GitHub";
-import EmailIcon from "@mui/icons-material/Email";
-import WebsiteIcon from "@mui/icons-material/Language";
 import { useFooter } from "./useFooter";
-import Divider from "@mui/material/Divider";
 
 export const Footer = () => {
   const { onClickContact } = useFooter();

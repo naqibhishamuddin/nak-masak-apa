@@ -1,10 +1,10 @@
 import Image from "next/image";
-import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
-import { RecipeCardProps } from "./types";
-import { useRecipeCard } from "./useRecipeCard";
+import Typography from "@mui/material/Typography";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
+import { RecipeCardProps } from "./types";
+import { useRecipeCard } from "./useRecipeCard";
 
 dayjs.extend(relativeTime);
 
