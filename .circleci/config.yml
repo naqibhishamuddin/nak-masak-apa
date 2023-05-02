@@ -51,10 +51,10 @@ jobs:
           paths:
             - node_modules
       - run:
-          name: Build web
+          name: Running test coverage
           command: pnpm run coverage
       - store_test_results:
-          path: test-results
+          path: coverage/
 
 workflows:
   build-project:
