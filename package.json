@@ -12,6 +12,7 @@
     "prepare": "husky install && chmod ug+x .husky/*",
     "test": "vitest",
     "coverage": "vitest run --coverage",
+    "open:coverage": "cd coverage/lcov-report && open index.html && cd ../..",
     "test:ui": "vitest --ui"
   },
   "dependencies": {
