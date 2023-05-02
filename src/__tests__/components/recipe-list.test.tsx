@@ -7,7 +7,7 @@ describe("Recipe List Component", () => {
     expect(screen.getByText("Kek Coklat Kukus")).toBeInTheDocument();
   });
 
-  it("should able to render correctly", () => {
+  it("should able to render results correctly", () => {
     render(<RecipeList searchValue="Cadbury Tart" />);
     expect(screen.getByText("Cadbury Tart")).toBeInTheDocument();
   });

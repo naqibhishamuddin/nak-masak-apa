@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { act, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { RecipeCard } from "components";
 import { recipes } from "components/recipe-list/recipes";
@@ -15,7 +15,9 @@ describe("Recipe Card Component", () => {
   });
 
   it("should be able to click on the recipe card", async () => {
-    await userEvent.click(screen.getByText(cardTitle));
-    waitFor(() => expect(vi.fn()).toBeCalled());
+    await act(async () => {
+      await userEvent.click(screen.getByText(cardTitle));
+    });
+    await waitFor(() => expect(global.open).toBeCalled());
   });
 });

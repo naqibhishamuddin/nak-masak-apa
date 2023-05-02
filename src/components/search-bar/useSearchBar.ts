@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { useState } from "react";
 
 export const useSearchBar = (onChange?: (value: string) => void) => {
   const [isPlaceholderVisible, setIsPlaceholderVisible] = useState(true);
