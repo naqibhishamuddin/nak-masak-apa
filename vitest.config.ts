@@ -3,13 +3,14 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
-    plugins: [react(), tsconfigPaths()],
-    test: {
-        setupFiles: ["src/__tests__/setup.ts"],
-        coverage: {
-            provider: "istanbul",
-        },
-        globals: true,
-        environment: "jsdom",
+  plugins: [react(), tsconfigPaths()],
+  test: {
+    setupFiles: ["src/__tests__/setup.ts"],
+    coverage: {
+      provider: "istanbul",
+      reporter: ["text", "lcov"],
     },
+    globals: true,
+    environment: "jsdom",
+  },
 });
