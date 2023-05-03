@@ -31,17 +31,13 @@ jobs:
           command: pnpm run build
   quality-gate:
     docker:
-      - image: node:alpine
+      - image: node:18.14.1
     resource_class: small
     steps:
       - checkout
       - restore_cache:
           keys:
             - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
-      - run:
-          name: Install Curl
-          command: apk add --no-cache curl
-      - run:
           name: Install pnpm package manager
           command: |
             curl -L https://pnpm.js.org/pnpm.js | node - add --global pnpm@7
