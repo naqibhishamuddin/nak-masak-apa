@@ -27,7 +27,7 @@ jobs:
       - run:
           name: Build web
           command: pnpm run build
-  tests:
+  coverage:
     docker:
       - image: node:alpine
     resource_class: small
@@ -51,24 +51,28 @@ jobs:
           paths:
             - node_modules
       - run:
-          name: Running test coverage
+          name: Running tests coverage
           command: pnpm run coverage
 
-   quality-gate:
+  web-quality-check:
     docker:
       - image: node:18.14.1
     resource_class: small
     steps:
       - checkout
       - sonarcloud/scan
-      
+
+orbs:
+  sonarcloud: sonarsource/sonarcloud@1.1.1
+
 workflows:
   build-project:
     jobs:
       - build
-      - tests:
+      - coverage
           requires:
             - build
-      - quality-gate:
+      - web-quality-check:
           requires:
             - build
+          context: SonarCloud
