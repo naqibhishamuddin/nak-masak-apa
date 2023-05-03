@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  sonarcloud: sonarsource/sonarcloud@1.0.3
+  sonarcloud: sonarsource/sonarcloud@1.1.1
 
 jobs:
   build:
@@ -61,5 +61,5 @@ workflows:
   build-project:
     jobs:
       - build
-      - quality-gate
+      - quality-gate:
           context: SonarCloud
