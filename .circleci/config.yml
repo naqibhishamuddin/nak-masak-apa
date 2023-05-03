@@ -32,7 +32,7 @@ jobs:
 
   coverage:
     docker:
-      - image: node:18.14.1
+      - image: node:alpine
     resource_class: small
     steps:
       - checkout
