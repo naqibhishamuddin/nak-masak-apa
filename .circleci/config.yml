@@ -29,7 +29,8 @@ jobs:
       - run:
           name: Build web
           command: pnpm run build
-  quality-gate:
+
+  coverage:
     docker:
       - image: node:18.14.1
     resource_class: small
@@ -38,6 +39,9 @@ jobs:
       - restore_cache:
           keys:
             - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+      - run:
+          name: Install Curl
+          command: apk add --no-cache curl
       - run:
           name: Install pnpm package manager
           command: |
@@ -52,11 +56,19 @@ jobs:
       - run:
           name: Running tests coverage
           command: pnpm run coverage
+
+  quality-gate:
+    docker:
+      - image: node:18.14.1
+    resource_class: small
+    steps:
+      - checkout
       - sonarcloud/scan
 
 workflows:
   build-project:
     jobs:
       - build
+      - coverage
       - quality-gate:
           context: SonarCloud
