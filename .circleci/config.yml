@@ -54,21 +54,8 @@ jobs:
           name: Running tests coverage
           command: pnpm run coverage
 
-  web-quality-check:
-    docker:
-      - image: node:18.14.1
-    resource_class: small
-    steps:
-      - checkout
-      - sonarcloud/scan
-
-orbs:
-  sonarcloud: sonarsource/sonarcloud@1.1.1
-
 workflows:
   build-project:
     jobs:
       - build
       - coverage
-      - web-quality-check:
-          context: SonarCloud
