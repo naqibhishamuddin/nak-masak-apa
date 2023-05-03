@@ -66,9 +66,9 @@ workflows:
   build-project:
     jobs:
       - build
-      - tests
+      - tests:
           requires:
-            -build
+            - build
       - quality-gate:
           requires:
             - build
