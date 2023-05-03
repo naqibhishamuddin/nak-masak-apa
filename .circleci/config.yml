@@ -54,8 +54,21 @@ jobs:
           name: Running test coverage
           command: pnpm run coverage
 
+   quality-gate:
+    docker:
+      - image: node:18.14.1
+    resource_class: small
+    steps:
+      - checkout
+      - sonarcloud/scan
+      
 workflows:
   build-project:
     jobs:
       - build
       - tests
+          requires:
+            -build
+      - quality-gate:
+          requires:
+            - build
