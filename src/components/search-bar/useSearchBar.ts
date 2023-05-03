@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { useState } from "react";
 
 export const useSearchBar = (onChange?: (value: string) => void) => {
   const [isPlaceholderVisible, setIsPlaceholderVisible] = useState(true);
@@ -14,10 +14,10 @@ export const useSearchBar = (onChange?: (value: string) => void) => {
     }
   };
 
-  const onChangeText = (event: ChangeEvent<HTMLInputElement>) => {
-    setSearchValue(event.target.value);
+  const onChangeText = (value: string) => {
+    setSearchValue(value);
     if (onChange) {
-      onChange(event.target.value);
+      onChange(value);
     }
   };
 

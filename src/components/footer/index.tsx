@@ -41,21 +41,21 @@ export const Footer = () => {
             <IconButton
               onClick={() => onClickContact("Github")}
               type="button"
-              aria-label="search"
+              aria-label="github"
             >
               <GithubIcon htmlColor="GrayText" />
             </IconButton>
             <IconButton
               onClick={() => onClickContact("Website")}
               type="button"
-              aria-label="search"
+              aria-label="website"
             >
               <WebsiteIcon htmlColor="GrayText" />
             </IconButton>
             <IconButton
               onClick={() => onClickContact("Email")}
               type="button"
-              aria-label="search"
+              aria-label="email"
             >
               <EmailIcon htmlColor="GrayText" />
             </IconButton>

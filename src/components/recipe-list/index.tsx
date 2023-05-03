@@ -26,7 +26,7 @@ const EmptyResult = () => {
   );
 };
 
-export const RecipeList = ({ searchValue }: { searchValue: string }) => {
+export const RecipeList = ({ searchValue = "" }: { searchValue?: string }) => {
   const { visibleItemCount } = useInfiniteScrolling();
   const getRecipes = useCallback(
     (list: typeof recipes) => {

@@ -9,7 +9,11 @@
     "lint": "next lint",
     "format": "prettier ./src --write",
     "commit": "cz",
-    "prepare": "husky install && chmod ug+x .husky/*"
+    "prepare": "husky install && chmod ug+x .husky/*",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "open:coverage": "cd coverage/lcov-report && open index.html && cd ../..",
+    "test:ui": "vitest --ui"
   },
   "dependencies": {
     "@emotion/react": "^11.10.8",
@@ -26,9 +30,16 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.1",
     "@commitlint/config-conventional": "^17.6.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
     "@types/node": "18.16.3",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
+    "@types/testing-library__jest-dom": "^5.14.5",
+    "@vitejs/plugin-react-swc": "^3.3.0",
+    "@vitest/coverage-istanbul": "^0.30.1",
+    "@vitest/ui": "^0.30.1",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "8.39.0",
@@ -36,9 +47,12 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "husky": "^8.0.3",
+    "jsdom": "^21.1.1",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "vite-tsconfig-paths": "^4.2.0",
+    "vitest": "^0.30.1"
   },
   "config": {
     "commitizen": {
