@@ -70,9 +70,5 @@ workflows:
     jobs:
       - build
       - coverage
-          requires:
-            - build
       - web-quality-check:
-          requires:
-            - build
           context: SonarCloud
