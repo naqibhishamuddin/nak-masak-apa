@@ -38,6 +38,7 @@ jobs:
       - restore_cache:
           keys:
             - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+      - run:
           name: Install pnpm package manager
           command: |
             curl -L https://pnpm.js.org/pnpm.js | node - add --global pnpm@7
