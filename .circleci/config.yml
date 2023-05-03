@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  sonarcloud: sonarsource/sonarcloud@1.0.3
 
 jobs:
   build:
@@ -27,7 +29,7 @@ jobs:
       - run:
           name: Build web
           command: pnpm run build
-  coverage:
+  quality-gate:
     docker:
       - image: node:alpine
     resource_class: small
@@ -53,9 +55,11 @@ jobs:
       - run:
           name: Running tests coverage
           command: pnpm run coverage
+      - sonarcloud/scan
 
 workflows:
   build-project:
     jobs:
       - build
-      - coverage
+      - quality-gate
+          context: SonarCloud
