@@ -1,10 +1,20 @@
-<center>
+<p align="center">
+  <a href="https://nakmasakapa.com" target="_blank" rel="noopener noreferrer">
+    <img width="180" src="./logo.png" alt="Nak Mask Apa logo">
+  </a>
+</p>
+<br/>
 
-![Nak Masak Apa](/logo.png)
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)[<img src="https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg" width="100" height="20">](https://sonarcloud.io/summary/new_code?id=naqibhishamuddin_nak-masak-apa)[![CircleCI](https://circleci.com/gh/naqibhishamuddin/nak-masak-apa.svg?style=shield&circle-token=d441858964854bbd8efc705425b0745b544f0bd4)](https://circleci.com/gh/naqibhishamuddin/nak-masak-apa) ![Statements](https://img.shields.io/badge/statements-100%25-brightgreen.svg?style=flat) ![Branches](https://img.shields.io/badge/branches-87.5%25-yellow.svg?style=flat) ![Functions](https://img.shields.io/badge/functions-100%25-brightgreen.svg?style=flat) ![Lines](https://img.shields.io/badge/lines-100%25-brightgreen.svg?style=flat)
-
-</center>
+<p align="center">
+  <a href="https://github.com/naqibhishamuddin/nak-masak-apa/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License"></a>
+  <a href="https://sonarcloud.io/summary/new_code?id=naqibhishamuddin_nak-masak-apa"><img src="https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg" width="90" height="20" alt="SonarCloud status"></a>
+  <a href="https://circleci.com/gh/naqibhishamuddin/nak-masak-apa"><img src="https://circleci.com/gh/naqibhishamuddin/nak-masak-apa.svg?style=shield&circle-token=d441858964854bbd8efc705425b0745b544f0bd4" alt="CircleCi Status"></a>
+  <a><img src="https://img.shields.io/badge/statements-100%25-brightgreen.svg?style=flat" alt="Statements"></a>
+  <a><img src="https://img.shields.io/badge/branches-87.5%25-yellow.svg?style=flat" alt="Branches"></a>
+  <a><img src="https://img.shields.io/badge/functions-100%25-brightgreen.svg?style=flat" alt="Functions"></a>
+  <a><img src="https://img.shields.io/badge/lines-100%25-brightgreen.svg?style=flat" alt="Lines"></a>
+</p>
+<br/>
 
 # Nak Masak Apa
 
