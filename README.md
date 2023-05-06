@@ -13,7 +13,6 @@
   <a><img src="https://img.shields.io/badge/functions-100%25-brightgreen.svg?style=flat" alt="Functions"></a>
   <a><img src="https://img.shields.io/badge/lines-100%25-brightgreen.svg?style=flat" alt="Lines"></a>
 </p>
-<br/>
 
 # Nak Masak Apa
 
