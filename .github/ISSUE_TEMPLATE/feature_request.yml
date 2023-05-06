@@ -1,0 +1,47 @@
+name: "🚀 Propose for a new feature"
+description: Kindly propose any new features that you would like to see added to Nak Masak Apa
+labels: ["enhancement: pending triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We appreciate your interest in our project and thank you for taking the time to fill out this feature report!
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Description
+      description: Kindly provide a clear and concise description of the problem, including detailed use cases and reasons. If you plan on submitting a PR for this issue, please indicate this in the description. Thank you for your cooperation!
+      placeholder: As a developer using Nak Masak Apa, I would like to have [goal/wish] to achieve [benefit]
+    validations:
+      required: true
+  - type: textarea
+    id: suggested-solution
+    attributes:
+      label: Proposed solution
+      description: "We suggest the following implementation for module [xy]..."
+    validations:
+      required: true
+  - type: textarea
+    id: alternative
+    attributes:
+      label: Alternative solution
+      description: Please provide a clear and concise description of any alternative solutions or features you have considered
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional information
+      description: Please include any relevant context or screenshots related to the feature request in this section
+  - type: checkboxes
+    id: checkboxes
+    attributes:
+      label: Validations
+      description: Kindly ensure that all validations have been completed before submitting the issue
+      options:
+        - label: Follow our [Code of Conduct](https://github.com/naqibhishamuddin/nak-masak-apa/blob/main/CODE_OF_CONDUCT.md)
+          required: true
+        - label: Read the [Contributing Guidelines](https://github.com/naqibhishamuddin/nak-masak-apa/blob/main/CONTRIBUTING.md).
+          required: true
+        - label: Read the [readme](https://github.com/naqibhishamuddin/nak-masak-apa/blob/main/README.md).
+          required: true
+        - label: Check that there isn't already an issue that request the same feature to avoid creating a duplicate.
+          required: true
