@@ -1,10 +1,9 @@
+<br/>
 <p align="center">
   <a href="https://nakmasakapa.com" target="_blank" rel="noopener noreferrer">
-    <img width="180" src="./logo.png" alt="Nak Mask Apa logo">
+    <img width="150" src="./logo.png" alt="Nak Mask Apa logo">
   </a>
 </p>
-<br/>
-
 <p align="center">
   <a href="https://github.com/naqibhishamuddin/nak-masak-apa/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License"></a>
   <a href="https://sonarcloud.io/summary/new_code?id=naqibhishamuddin_nak-masak-apa"><img src="https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg" width="90" height="20" alt="SonarCloud status"></a>
