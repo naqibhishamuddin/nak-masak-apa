@@ -81,18 +81,14 @@ jobs:
           command: npx semantic-release
 
 workflows:
-  development-workflow:
+  build-quality-release:
     jobs:
       - build
       - coverage
-  production-release:
-    jobs:
-      - build
-      - coverage
-      - release:
+      - release
           requires:
             - build
             - coverage
           filters:
             branches:
-              only: docs/contributions-setup
+              only: main
