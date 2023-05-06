@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  sonarcloud: sonarsource/sonarcloud@1.1.1
 
 jobs:
   build:
@@ -27,18 +29,16 @@ jobs:
       - run:
           name: Build web
           command: pnpm run build
-  coverage:
+
+  quality-gate:
     docker:
-      - image: node:alpine
+      - image: node:18.14.1
     resource_class: small
     steps:
       - checkout
       - restore_cache:
           keys:
             - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
-      - run:
-          name: Install Curl
-          command: apk add --no-cache curl
       - run:
           name: Install pnpm package manager
           command: |
@@ -53,6 +53,8 @@ jobs:
       - run:
           name: Running tests coverage
           command: pnpm run coverage
+      - sonarcloud/scan
+
   release:
     docker:
       - image: node:alpine
@@ -84,11 +86,12 @@ workflows:
   build-quality-release:
     jobs:
       - build
-      - coverage
-      - release
+      - quality-gate:
+          context: SonarCloud
+      - release:
           requires:
             - build
-            - coverage
+            - quality-gate
           filters:
             branches:
               only: main
