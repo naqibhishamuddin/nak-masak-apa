@@ -37,11 +37,11 @@ body:
       label: Validations
       description: Kindly ensure that all validations have been completed before submitting the issue
       options:
-        - label: Follow our [Code of Conduct](https://github.com/naqibhishamuddin/nak-masak-apa/blob/main/CODE_OF_CONDUCT.md)
+        - label: Follow our [Code of Conduct](https://github.com/naqibhishamuddin/nak-masak-apa/blob/master/CODE_OF_CONDUCT.md)
           required: true
-        - label: Read the [Contributing Guidelines](https://github.com/naqibhishamuddin/nak-masak-apa/blob/main/CONTRIBUTING.md).
+        - label: Read the [Contributing Guidelines](https://github.com/naqibhishamuddin/nak-masak-apa/blob/master/CONTRIBUTING.md).
           required: true
-        - label: Read the [readme](https://github.com/naqibhishamuddin/nak-masak-apa/blob/main/README.md).
+        - label: Read the [readme](https://github.com/naqibhishamuddin/nak-masak-apa/blob/master/README.md).
           required: true
         - label: Check that there isn't already an issue that request the same feature to avoid creating a duplicate.
           required: true

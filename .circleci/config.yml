@@ -94,4 +94,4 @@ workflows:
             - quality-gate
           filters:
             branches:
-              only: main
+              only: master
