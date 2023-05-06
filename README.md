@@ -1,5 +1,5 @@
 <center>
-<span style="font-size:6em;">👨🏻‍🍳</span>
+<img src="../nakmasakapa/logo.png" width="130" height="130">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)[<img src="https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg" width="100" height="20">](https://sonarcloud.io/summary/new_code?id=naqibhishamuddin_nak-masak-apa)[![CircleCI](https://circleci.com/gh/naqibhishamuddin/nak-masak-apa.svg?style=shield&circle-token=d441858964854bbd8efc705425b0745b544f0bd4)](https://circleci.com/gh/naqibhishamuddin/nak-masak-apa) ![Statements](https://img.shields.io/badge/statements-100%25-brightgreen.svg?style=flat) ![Branches](https://img.shields.io/badge/branches-87.5%25-yellow.svg?style=flat) ![Functions](https://img.shields.io/badge/functions-100%25-brightgreen.svg?style=flat) ![Lines](https://img.shields.io/badge/lines-100%25-brightgreen.svg?style=flat)
 
