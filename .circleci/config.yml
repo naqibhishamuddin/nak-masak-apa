@@ -85,7 +85,7 @@ workflows:
     jobs:
       - build
       - coverage
-  production-release
+  production-release:
     jobs:
       - build
       - coverage
