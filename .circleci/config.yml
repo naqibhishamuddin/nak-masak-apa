@@ -29,6 +29,7 @@ jobs:
       - run:
           name: Build web
           command: pnpm run build
+
   quality-gate:
     docker:
       - image: node:18.14.1
@@ -54,9 +55,43 @@ jobs:
           command: pnpm run coverage
       - sonarcloud/scan
 
+  release:
+    docker:
+      - image: node:alpine
+    resource_class: small
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+      - run:
+          name: Install Curl and Git
+          command: apk add --no-cache curl git
+      - run:
+          name: Install pnpm package manager
+          command: |
+            curl -L https://pnpm.js.org/pnpm.js | node - add --global pnpm@7
+      - run:
+          name: Install  project dependencies
+          command: pnpm install
+      - save_cache:
+          key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+          paths:
+            - node_modules
+      - run:
+          name: Update version number, generate release notes and publish to GitHub
+          command: npx semantic-release
+
 workflows:
-  build-project:
+  build-quality-release:
     jobs:
       - build
       - quality-gate:
           context: SonarCloud
+      - release:
+          requires:
+            - build
+            - quality-gate
+          filters:
+            branches:
+              only: main
