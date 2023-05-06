@@ -90,6 +90,9 @@ devDependencies:
   husky:
     specifier: ^8.0.3
     version: 8.0.3
+  istanbul-badges-readme:
+    specifier: ^1.8.5
+    version: 1.8.5
   jsdom:
     specifier: ^21.1.1
     version: 21.1.1
@@ -3837,6 +3840,11 @@ packages:
 
   /isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
+    dev: true
+
+  /istanbul-badges-readme@1.8.5:
+    resolution: {integrity: sha512-VEh90ofuufPZIbLeDF2g14wpe0sebhirG0xHooYKpNPYOkGXm6y+HJFotQqIzCg0NmbCnlKnOPL1B2oxG7/piA==}
+    hasBin: true
     dev: true
 
   /istanbul-lib-coverage@3.2.0:

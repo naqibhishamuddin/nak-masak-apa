@@ -13,7 +13,8 @@
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "open:coverage": "cd coverage/lcov-report && open index.html && cd ../..",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "generate:badges": "istanbul-badges-readme"
   },
   "dependencies": {
     "@emotion/react": "^11.10.8",
@@ -47,6 +48,7 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "husky": "^8.0.3",
+    "istanbul-badges-readme": "^1.8.5",
     "jsdom": "^21.1.1",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
