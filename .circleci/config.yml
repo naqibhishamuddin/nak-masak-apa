@@ -53,9 +53,46 @@ jobs:
       - run:
           name: Running tests coverage
           command: pnpm run coverage
+  release:
+    docker:
+      - image: node:alpine
+    resource_class: small
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+      - run:
+          name: Install Curl
+          command: apk add --no-cache curl
+      - run:
+          name: Install pnpm package manager
+          command: |
+            curl -L https://pnpm.js.org/pnpm.js | node - add --global pnpm@7
+      - run:
+          name: Install  project dependencies
+          command: pnpm install
+      - save_cache:
+          key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+          paths:
+            - node_modules
+      - run:
+          name: Update version number, generate release notes and publish to GitHub
+          command: npx semantic-release
 
 workflows:
-  build-project:
+  development-workflow:
     jobs:
       - build
       - coverage
+  production-release
+    jobs:
+      - build
+      - coverage
+      - release:
+          requires:
+            - build
+            - coverage
+          filters:
+            branches:
+              only: docs/contributions-setup
