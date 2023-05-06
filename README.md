@@ -46,14 +46,14 @@ Once the final step is completed, you can access Nak Masak Apa on your local mac
 
 The primary objective of this repository is to facilitate the continual enhancement of the Nak Masak Apa web application, with a focus on enhancing its performance and usability. The development of Nak Masak Apa is conducted transparently on the GitHub platform, and we express our gratitude to the community for their valuable contributions towards bug fixes and enhancements.
 
-### [Code of Conduct](https://github.com/naqibhishamuddin/nak-masak-apa/blob/main/CODE_OF_CONDUCT.md)
+### [Code of Conduct](https://github.com/naqibhishamuddin/nak-masak-apa/blob/master/CODE_OF_CONDUCT.md)
 
 Nak Masak Apa upholds a Code of Conduct, which is mandatory for all project participants to abide by. We request that you review the entire document to gain a comprehensive understanding of the acceptable and unacceptable actions.
 
-### [Contributing Guide](https://github.com/naqibhishamuddin/nak-masak-apa/blob/main/CONTRIBUTING.md)
+### [Contributing Guide](https://github.com/naqibhishamuddin/nak-masak-apa/blob/master/CONTRIBUTING.md)
 
 To familiarize yourself with our development process, bug-fixing and enhancement proposal procedures, as well as instructions on building and testing changes to Nak Masak Apa, please refer to our contributing guide.
 
 ## License
 
-Nak Masak Apa is licensed under the MIT License, which grants you the freedom to use, modify, and distribute this software for both personal and commercial purposes, subject to certain conditions. To review the complete terms and conditions of the MIT License, please refer to the [LICENSE](https://github.com/naqibhishamuddin/nak-masak-apa/blob/main/LICENSE) file located in the project repository.
+Nak Masak Apa is licensed under the MIT License, which grants you the freedom to use, modify, and distribute this software for both personal and commercial purposes, subject to certain conditions. To review the complete terms and conditions of the MIT License, please refer to the [LICENSE](https://github.com/naqibhishamuddin/nak-masak-apa/blob/master/LICENSE) file located in the project repository.
