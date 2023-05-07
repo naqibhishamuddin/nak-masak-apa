@@ -1,3 +1,9 @@
+# [1.1.0](https://github.com/naqibhishamuddin/nak-masak-apa/compare/v1.0.0...v1.1.0) (2023-05-07)
+
+### Features
+
+- add SEO configurations, robots, sitemap and og-image ([7014b1e](https://github.com/naqibhishamuddin/nak-masak-apa/commit/7014b1e326ee442e0fbc894d201e2ebd5113ce94))
+
 # 1.0.0 (2023-05-06)
 
 ### Bug Fixes
