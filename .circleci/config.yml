@@ -52,7 +52,7 @@ jobs:
             - node_modules
       - run:
           name: Install browsers for end-to-end tests
-          command: npx playwright install msedge chrome
+          command: npx playwright install-deps
       - run:
           name: Running tests coverage
           command: pnpm run coverage
