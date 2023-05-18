@@ -15,8 +15,8 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
-    screenshot: "on",
-    video: "on",
+    screenshot: process.env.CI ? "off" : "on",
+    video: process.env.CI ? "off" : "on",
   },
 
   /* Configure projects for major browsers */

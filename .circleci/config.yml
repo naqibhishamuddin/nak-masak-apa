@@ -51,8 +51,11 @@ jobs:
           paths:
             - node_modules
       - run:
-          name: Install browsers for end-to-end tests
+          name: Install playwright dependencies
           command: npx playwright install-deps
+      - run:
+          name: Install browsers
+          command: npx playwright install chrome msedge
       - run:
           name: Running tests coverage
           command: pnpm run coverage
