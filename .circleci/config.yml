@@ -52,10 +52,7 @@ jobs:
             - node_modules
       - run:
           name: Install playwright dependencies
-          command: npx playwright install-deps
-      - run:
-          name: Install browsers
-          command: npx playwright install chrome msedge
+          command: npx playwright install --with-deps chromium firefox webkit chrome msedge
       - run:
           name: Running tests coverage
           command: pnpm run coverage
