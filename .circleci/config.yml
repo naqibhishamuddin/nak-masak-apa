@@ -58,7 +58,7 @@ jobs:
           command: pnpm run coverage
       - run:
           name: Running end-to-end tests
-          command: pnpm run test:e2e
+          command: pnpm run e2e:test
       - sonarcloud/scan
 
   release:
