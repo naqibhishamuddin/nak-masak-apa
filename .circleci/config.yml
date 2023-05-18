@@ -51,8 +51,8 @@ jobs:
           paths:
             - node_modules
       - run:
-          name: Install Playwright
-          command: pnpm dlx playwright install --with-deps
+          name: Install browsers for end-to-end tests
+          command: npx playwright install msedge chrome
       - run:
           name: Running tests coverage
           command: pnpm run coverage
