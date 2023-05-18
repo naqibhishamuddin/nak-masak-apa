@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   test: {
     setupFiles: ["tests/unit/setup.ts"],
+    include: ["tests/unit/**/*.test.{ts,tsx}"],
     coverage: {
       provider: "istanbul",
       reporter: ["text", "lcov", "json-summary"],
