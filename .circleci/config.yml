@@ -52,7 +52,7 @@ jobs:
             - node_modules
       - run:
           name: Install Playwright
-          command: npx playwright install --with-deps
+          command: pnpm dlx playwright install --with-deps
       - run:
           name: Running tests coverage
           command: pnpm run coverage
