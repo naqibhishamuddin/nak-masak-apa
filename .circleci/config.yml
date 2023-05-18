@@ -51,8 +51,14 @@ jobs:
           paths:
             - node_modules
       - run:
+          name: Install Playwright
+          command: npx playwright install --with-deps
+      - run:
           name: Running tests coverage
           command: pnpm run coverage
+      - run:
+          name: Running end-to-end tests
+          command: pnpm run test:e2e
       - sonarcloud/scan
 
   release:
