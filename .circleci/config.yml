@@ -58,6 +58,8 @@ jobs:
       - run:
           name: Running end-to-end tests
           command: pnpm run e2e:test
+      - store_artifacts:
+          path: playwright-report/index.html
       - sonarcloud/scan
 
   release:
