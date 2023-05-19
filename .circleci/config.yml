@@ -32,8 +32,7 @@ jobs:
 
   quality-gate:
     docker:
-      - image: node:18.14.1
-    resource_class: small
+      - image: mcr.microsoft.com/playwright:v1.33.0-focal
     steps:
       - checkout
       - restore_cache:
@@ -51,8 +50,16 @@ jobs:
           paths:
             - node_modules
       - run:
+          name: Install playwright dependencies
+          command: npx playwright install --with-deps chrome msedge
+      - run:
           name: Running tests coverage
           command: pnpm run coverage
+      - run:
+          name: Running end-to-end tests
+          command: pnpm run e2e:test
+      - store_artifacts:
+          path: playwright-report/index.html
       - sonarcloud/scan
 
   release:

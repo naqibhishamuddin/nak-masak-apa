@@ -14,7 +14,11 @@
     "coverage": "vitest run --coverage",
     "open:coverage": "cd coverage/lcov-report && open index.html && cd ../..",
     "test:ui": "vitest --ui",
-    "generate:badges": "istanbul-badges-readme"
+    "generate:badges": "istanbul-badges-readme",
+    "e2e:test": "playwright test",
+    "e2e:ui": "playwright test --ui",
+    "e2e:codegen": "playwright codegen",
+    "e2e:report": "playwright show-report"
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
@@ -31,6 +35,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
+    "@playwright/test": "^1.33.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@testing-library/jest-dom": "^5.16.5",
