@@ -52,7 +52,7 @@ jobs:
             - node_modules
       - run:
           name: Install playwright dependencies
-          command: npx playwright install --with-deps
+          command: npx playwright install --with-deps chrome msedge
       - run:
           name: Running tests coverage
           command: pnpm run coverage
