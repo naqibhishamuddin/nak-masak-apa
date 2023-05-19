@@ -32,7 +32,7 @@ jobs:
 
   quality-gate:
     docker:
-      - image: node:18.14.1
+      - image: mcr.microsoft.com/playwright:v1.23.1-focal
     resource_class: small
     steps:
       - checkout
@@ -52,7 +52,7 @@ jobs:
             - node_modules
       - run:
           name: Install playwright dependencies
-          command: npx playwright install --with-deps chromium firefox webkit chrome msedge
+          command: npx playwright install --with-deps
       - run:
           name: Running tests coverage
           command: pnpm run coverage
