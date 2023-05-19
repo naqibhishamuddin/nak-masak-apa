@@ -1,3 +1,9 @@
+# [1.2.0](https://github.com/naqibhishamuddin/nak-masak-apa/compare/v1.1.0...v1.2.0) (2023-05-19)
+
+### Features
+
+- add playwright test and integration setup ([af7e4d6](https://github.com/naqibhishamuddin/nak-masak-apa/commit/af7e4d6084bd73d84cf2e52577c12b00c994ecfa))
+
 # [1.1.0](https://github.com/naqibhishamuddin/nak-masak-apa/compare/v1.0.0...v1.1.0) (2023-05-07)
 
 ### Features
