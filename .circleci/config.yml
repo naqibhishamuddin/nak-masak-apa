@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  bun-orb: cmgriffing/bun-orb@0.0.28
+  bun: ksylvest/bun@1.0.1
   sonarcloud: sonarsource/sonarcloud@1.1.1
 
 jobs:
@@ -10,7 +10,7 @@ jobs:
     resource_class: small
     steps:
       - checkout
-      - bun-orb/setup
+      - bun/install
       - restore_cache:
           keys:
             - v1-bun-deps-{{ checksum "bun.lockb" }}
@@ -32,7 +32,7 @@ jobs:
       - image: mcr.microsoft.com/playwright:v1.42.1-jammy
     steps:
       - checkout
-      - bun-orb/setup
+      - bun/install
       - restore_cache:
           keys:
             - v1-bun-deps-{{ checksum "bun.lockb" }}
@@ -64,7 +64,7 @@ jobs:
     resource_class: small
     steps:
       - checkout
-      - bun-orb/setup
+      - bun/install
       - restore_cache:
           keys:
             - v1-bun-deps-{{ checksum "bun.lockb" }}
