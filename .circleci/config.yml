@@ -1,7 +1,6 @@
 version: 2.1
 orbs:
   bun: ksylvest/bun@1.0.1
-  sonarcloud: sonarsource/sonarcloud@1.1.1
 
 jobs:
   build:
@@ -62,7 +61,6 @@ jobs:
           command: bun run e2e:test
       - store_artifacts:
           path: playwright-report/index.html
-      - sonarcloud/scan
 
   release:
     docker:
@@ -91,8 +89,7 @@ workflows:
   build-quality-release:
     jobs:
       - build
-      - quality-gate:
-          context: SonarCloud
+      - quality-gate
       - release:
           requires:
             - build
