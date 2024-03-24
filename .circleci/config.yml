@@ -1,93 +1,85 @@
 version: 2.1
 orbs:
+  bun-orb: cmgriffing/bun-orb@0.0.28
   sonarcloud: sonarsource/sonarcloud@1.1.1
 
 jobs:
   build:
     docker:
-      - image: node:alpine
+      - image: cimg/node:20.11.1
     resource_class: small
     steps:
       - checkout
+      - bun-orb/setup
       - restore_cache:
           keys:
-            - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
-      - run:
-          name: Install Curl
-          command: apk add --no-cache curl
-      - run:
-          name: Install pnpm package manager
-          command: |
-            curl -L https://pnpm.js.org/pnpm.js | node - add --global pnpm@7
+            - v1-bun-deps-{{ checksum "bun.lockb" }}
+            - v1-bun-deps-
       - run:
           name: Install  project dependencies
-          command: pnpm install
+          command: bun install
       - save_cache:
-          key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+          key: v1-bun-deps-{{ checksum "bun.lockb" }}
           paths:
+            - ~/.bun/install/cache
             - node_modules
       - run:
           name: Build web
-          command: pnpm run build
+          command: bun run build
 
   quality-gate:
     docker:
-      - image: mcr.microsoft.com/playwright:v1.33.0-focal
+      - image: mcr.microsoft.com/playwright:v1.42.1-jammy
     steps:
       - checkout
+      - bun-orb/setup
       - restore_cache:
           keys:
-            - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
-      - run:
-          name: Install pnpm package manager
-          command: |
-            curl -L https://pnpm.js.org/pnpm.js | node - add --global pnpm@7
+            - v1-bun-deps-{{ checksum "bun.lockb" }}
+            - v1-bun-deps-
       - run:
           name: Install  project dependencies
-          command: pnpm install
+          command: bun install
       - save_cache:
-          key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+          key: v1-bun-deps-{{ checksum "bun.lockb" }}
           paths:
+            - ~/.bun/install/cache
             - node_modules
       - run:
           name: Install playwright dependencies
           command: npx playwright install --with-deps chrome msedge
       - run:
           name: Running tests coverage
-          command: pnpm run coverage
+          command: bun run coverage
       - run:
           name: Running end-to-end tests
-          command: pnpm run e2e:test
+          command: bun run e2e:test
       - store_artifacts:
           path: playwright-report/index.html
       - sonarcloud/scan
 
   release:
     docker:
-      - image: node:alpine
+      - image: cimg/node:20.11.1
     resource_class: small
     steps:
       - checkout
+      - bun-orb/setup
       - restore_cache:
           keys:
-            - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
-      - run:
-          name: Install Curl and Git
-          command: apk add --no-cache curl git
-      - run:
-          name: Install pnpm package manager
-          command: |
-            curl -L https://pnpm.js.org/pnpm.js | node - add --global pnpm@7
+            - v1-bun-deps-{{ checksum "bun.lockb" }}
+            - v1-bun-deps-
       - run:
           name: Install  project dependencies
-          command: pnpm install
+          command: bun install
       - save_cache:
-          key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+          key: v1-bun-deps-{{ checksum "bun.lockb" }}
           paths:
+            - ~/.bun/install/cache
             - node_modules
       - run:
           name: Update version number, generate release notes and publish to GitHub
-          command: npx semantic-release
+          command: bunx semantic-release
 
 workflows:
   build-quality-release:
