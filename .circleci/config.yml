@@ -83,7 +83,7 @@ jobs:
             - node_modules
       - run:
           name: Update version number, generate release notes and publish to GitHub
-          command: bunx semantic-release
+          command: bun x semantic-release
 
 workflows:
   build-quality-release:
