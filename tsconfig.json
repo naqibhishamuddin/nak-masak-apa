@@ -17,6 +17,6 @@
     "baseUrl": "src",
     "types": ["vitest/globals"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src", "tests"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src", "tests", "vitest.config.mjs"],
   "exclude": ["node_modules"]
 }
