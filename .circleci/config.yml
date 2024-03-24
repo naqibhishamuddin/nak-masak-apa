@@ -32,6 +32,9 @@ jobs:
       - image: mcr.microsoft.com/playwright:v1.42.1-jammy
     steps:
       - checkout
+      - run:
+          name: Install unzip package
+          command: sudo apt install unzip
       - bun/install
       - restore_cache:
           keys:
