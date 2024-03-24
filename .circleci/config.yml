@@ -33,8 +33,11 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Update packages
+          command: apt-get update
+      - run:
           name: Install unzip package
-          command: apt install unzip
+          command: apt-get -y install unzip
       - bun/install
       - restore_cache:
           keys:
