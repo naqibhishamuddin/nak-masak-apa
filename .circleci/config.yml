@@ -34,7 +34,7 @@ jobs:
       - checkout
       - run:
           name: Install unzip package
-          command: sudo apt install unzip
+          command: apt install unzip
       - bun/install
       - restore_cache:
           keys:
